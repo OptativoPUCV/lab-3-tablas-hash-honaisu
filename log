@@ -72,3 +72,14 @@ hashmap.c:58:19: error: assignment from incompatible pointer type [-Werror=incom
                    ^
 cc1.exe: all warnings being treated as errors
 e9ddf5e
+Mon, Apr 14, 2025 10:41:19 AM: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'createMap':
+hashmap.c:57:19: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     mapa->buckets = (Pair*) calloc(capacity, sizeof(Pair)) ;
+                   ^
+cc1.exe: all warnings being treated as errors
+996aa97
