@@ -57,7 +57,7 @@ HashMap * createMap(long capacity) {
     if (mapa == NULL) return NULL ;
     par->key = NULL ;
     par->value = NULL ;
-    mapa->buckets = par ;
+    mapa->buckets = &par ;
     mapa->size = 0 ;
     mapa->capacity = 0 ;
     mapa->current = -1 ;
