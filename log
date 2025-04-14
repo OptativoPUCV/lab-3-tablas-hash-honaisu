@@ -35,3 +35,8 @@ Mon, Apr 14, 2025 10:34:31 AM:
  tests:  0|6
 total_score: 0/70
 53ae5a0
+Mon, Apr 14, 2025 10:35:21 AM: 
+ hashmap.c | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+ tests:  0|0
+d645dc0
