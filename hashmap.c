@@ -45,7 +45,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     if (map->buckets[posicion] != NULL) {
         do {
             posicion = (posicion + 1)%map->size ;
-        } while (map->buckets[posicion]->key != NULL) ;
+        } while (map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL) ;
     }
 
     map->buckets[posicion] = nuevoDato ;
