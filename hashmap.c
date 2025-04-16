@@ -43,6 +43,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair* nuevoDato = createPair(key, value) ;
     long posicion = hash(key, map->capacity) ;
     //---//
+    if (map->size >= map->capacity * 0.7) enlarge(map) ;
+    //---//
     while (map->buckets[posicion] != NULL) {
         if (is_equal(map->buckets[posicion]->key, key)) return ;
         posicion = (posicion + 1)%(map->capacity) ;
@@ -66,7 +68,7 @@ void enlarge(HashMap * map) {
         map->capacity = capacidadAnterior ;
         return ;
     }
-
+    //---//
     for (int i = 0 ; i < map->capacity ; i++) {
         nuevoBuckets[i] = NULL ;
     }
