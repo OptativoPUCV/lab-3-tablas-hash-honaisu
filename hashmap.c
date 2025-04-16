@@ -91,8 +91,8 @@ Pair * searchMap(HashMap * map,  char * key) {
         posicion = (posicion + 1)%(map->capacity) ;
     }
     //---//
-    
-    return NULL;
+    map->current = posicion ;
+    return map->buckets[posicion] ;
 }
 
 Pair * firstMap(HashMap * map) {
