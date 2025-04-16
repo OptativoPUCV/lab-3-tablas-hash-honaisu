@@ -43,8 +43,9 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair* nuevoDato = createPair(key, value) ;
     long posicion = hash(key, map->capacity) ;
     if (map->buckets[posicion] != NULL) {
+        long tamanno = map->size ;
         do {
-            posicion = (posicion + 1)%map->size ;
+            posicion = (posicion + 1)%tamanno ;
         } while (map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL) ;
     }
 
