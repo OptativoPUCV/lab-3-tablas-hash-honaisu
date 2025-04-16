@@ -42,7 +42,6 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     Pair* nuevoDato = createPair(key, value) ;
     long posicion = hash(key, map->capacity) ;
-    printf("%ld", map->size) ;
     //---//
     while (map->buckets[posicion] != NULL) {
         if (map->buckets[posicion]->key == NULL) break ;
@@ -50,6 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     //---//
     map->buckets[posicion] = nuevoDato ;
+    map->current = posicion ;
     map->size++ ;
 }
 
