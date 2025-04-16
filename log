@@ -424,3 +424,14 @@ Wed, Apr 16, 2025  2:17:38 PM:
  tests:  16|1
 total_score: 60/70
 4950e2f
+Wed, Apr 16, 2025  2:22:19 PM: 
+ hashmap.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:74:61: error: comparison between pointer and integer [-Werror]
+         if (punteroPares[i] == NULL || punteroPares[i]->key == -1) continue ;
+                                                             ^~
+cc1.exe: all warnings being treated as errors
+eb14a63
