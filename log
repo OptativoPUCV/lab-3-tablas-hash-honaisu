@@ -164,3 +164,14 @@ hashmap.c:48:87: error: comparison between pointer and integer [-Werror]
                                                                                        ^~
 cc1.exe: all warnings being treated as errors
 cac2863
+Wed, Apr 16, 2025 11:30:20 AM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:48:87: error: comparison between pointer and integer [-Werror]
+         } while (map->buckets[posicion]->key != NULL || map->buckets[posicion]->value != -1) ;
+                                                                                       ^~
+cc1.exe: all warnings being treated as errors
+3a8fdeb
