@@ -325,3 +325,9 @@ Wed, Apr 16, 2025  1:44:18 PM:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 8b1bb94
+Wed, Apr 16, 2025  1:45:25 PM: 
+ hashmap.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+ tests:  5|4
+total_score: 30/70
+6cce08b

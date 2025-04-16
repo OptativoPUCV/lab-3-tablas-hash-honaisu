@@ -86,14 +86,12 @@ Pair * searchMap(HashMap * map,  char * key) {
     long posicion = hash(key, map->capacity) ;
     //---//
     while (map->buckets[posicion] != NULL) {
-        if (is_equal(map->buckets[posicion]->key, key)) break ;
+        if (is_equal(map->buckets[posicion]->key, NULL)) return NULL ;
+        else if (is_equal(map->buckets[posicion]->key, key)) break ;
         posicion = (posicion + 1)%(map->capacity) ;
     }
     //---//
-    if (is_equal(map->buckets[posicion]->key, key)) {
-        map->current = posicion ;
-        return map->buckets[posicion] ;
-    }
+    
     return NULL;
 }
 
