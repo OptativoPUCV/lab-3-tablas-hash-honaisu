@@ -50,6 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }*/
 
     map->buckets[posicion] = nuevoDato ;
+    map->size++ ;
 }
 
 void enlarge(HashMap * map) {
