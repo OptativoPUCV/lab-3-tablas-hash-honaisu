@@ -56,13 +56,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
-    Pair** punteroPares = map->buckets ;
+    Pair** punteroPares = map->buckets ; // antiguo copia
     long capacidadAnterior = map->capacity ;
     //---//
     map->capacity *= 2 ; // Nueva Capacidad
     //---//
     Pair** nuevoBuckets = (Pair**) malloc(map->capacity * sizeof(Pair*)) ;
-    if (nuevoBuckets == NULL) return ;
+    if (nuevoBuckets == NULL) {
+        map->capacity = capacidadAnterior ;
+        return ;
+    }
+
     for (int i = 0 ; i < map->capacity ; i++) {
         nuevoBuckets[i] = NULL ;
     }
@@ -70,7 +74,7 @@ void enlarge(HashMap * map) {
     map->buckets = nuevoBuckets ;
     map->size = 0 ;
     for (int i = 0 ; i < capacidadAnterior ; i++) {
-        if (punteroPares[i] == NULL) continue ;
+        if (punteroPares[i] == NULL || punteroPares[i]->key == NULL) continue ;
         insertMap(map, map->buckets[i]->key, map->buckets[i]->value) ;
         map->size++ ;
     }
