@@ -64,8 +64,7 @@ void enlarge(HashMap * map) {
     Pair** nuevoBuckets = (Pair**) malloc(map->capacity * sizeof(Pair*)) ;
     if (nuevoBuckets == NULL) return ;
     for (int i = 0 ; i < map->capacity ; i++) {
-        nuevoBuckets[i] = (Pair*) malloc(sizeof(Pair)) ;
-        if (nuevoBuckets[i] == NULL) return ;
+        nuevoBuckets[i] = NULL ;
     }
     //---//
     map->buckets = nuevoBuckets ;
