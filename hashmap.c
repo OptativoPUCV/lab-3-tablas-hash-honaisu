@@ -76,7 +76,6 @@ void enlarge(HashMap * map) {
     for (int i = 0 ; i < capacidadAnterior ; i++) {
         if (punteroPares[i] == NULL || punteroPares[i]->key == NULL) continue ;
         insertMap(map, map->buckets[i]->key, map->buckets[i]->value) ;
-        map->size++ ;
     }
     free(punteroPares) ;
 }
