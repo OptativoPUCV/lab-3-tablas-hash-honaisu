@@ -63,7 +63,7 @@ HashMap * createMap(long capacity) {
         pares[i]->key = NULL ;
         pares[i]->value = NULL ;
     } 
-
+    pares = NULL ;
     mapa->buckets = pares ;
     mapa->size = 0 ;
     mapa->capacity = capacity ;
