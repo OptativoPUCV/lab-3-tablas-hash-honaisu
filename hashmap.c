@@ -74,8 +74,10 @@ void enlarge(HashMap * map) {
     map->buckets = nuevoBuckets ;
     map->size = 0 ;
     for (int i = 0 ; i < capacidadAnterior ; i++) {
-        if (punteroPares[i] == NULL || punteroPares[i]->key == NULL) continue ;
-        insertMap(map, nuevoBuckets[i]->key, nuevoBuckets[i]->value) ;
+        if (punteroPares[i] != NULL && punteroPares[i]->key != NULL) {
+            insertMap(map, nuevoBuckets[i]->key, nuevoBuckets[i]->value) ;
+        }
+        
     }
     free(punteroPares) ;
 }
