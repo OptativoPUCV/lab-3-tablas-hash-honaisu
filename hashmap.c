@@ -42,12 +42,11 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     Pair* nuevoDato = createPair(key, value) ;
     long posicion = hash(key, map->capacity) ;
-    /*
     if (map->buckets[posicion]->key != NULL) {
         do {
             posicion++ ;
         } while (map->buckets[posicion]->key != NULL) ;
-    }*/
+    }
 
     map->buckets[posicion] = nuevoDato ;
     map->size++ ;
