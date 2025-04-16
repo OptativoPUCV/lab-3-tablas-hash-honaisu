@@ -58,7 +58,7 @@ HashMap * createMap(long capacity) {
     Pair** pares = (Pair**) malloc(capacity * sizeof(Pair*)) ;
     if (pares == NULL) return NULL ;
     for (long i = 0 ; i < capacity ; i++) {
-        pares[i] = createPair(NULL, NULL) ;
+        pares[i] = NULL ;
     } 
 
     mapa->buckets = pares ;
