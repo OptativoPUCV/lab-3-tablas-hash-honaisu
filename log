@@ -153,3 +153,14 @@ Wed, Apr 16, 2025 11:25:28 AM:
  tests:  1|5
 total_score: 10/70
 e1e678b
+Wed, Apr 16, 2025 11:29:28 AM: 
+ hashmap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:48:87: error: comparison between pointer and integer [-Werror]
+         } while (map->buckets[posicion]->key == NULL || map->buckets[posicion]->value == -1) ;
+                                                                                       ^~
+cc1.exe: all warnings being treated as errors
+cac2863
