@@ -120,11 +120,11 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     long i = map->current ;
     do {
+        i = (i + 1)%map->capacity ;
         if (map->buckets[i]->key != NULL) {
             map->current = i ;
             return map->buckets[i] ;
         }
-        i = (i + 1)%map->capacity ;
     } while (i > map->current || i < map->current) ;
     return NULL;
 }
